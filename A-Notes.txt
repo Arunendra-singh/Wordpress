@@ -1,0 +1,46 @@
+create database on server first 
+
+create database user // little_adventures db name and password //
+
+create ftp
+  - select post in permalink 	
+  - in header.php start with php tag, functions.php and style.css is from wordpress site.
+
+1 - inside your ftp in your name 
+2 - then copy wordpress and keep it same always for future use
+3 - install wordpress and rename the folder.
+4 - in the theme folder there are many themes, create 1 duplicate with - child. e.x.twentythirteen-child
+4 - then create footer.php and header.php in folder of ftp and paste the code from https://codex.wordpress.org/Child_Themes
+	in style.css and function.php
+5 - paste all the files of the given theme with header and footer.php
+6 - create template-home.php and paste all the index.html code in this file except header and footer
+7 - To make the file read css use this link where css is available in header and footer.php - <?php echo get_stylesheet_directory_uri() ; ?>/
+8 - After all the changes done then create pages in wordpress. Pages will consist of all the menu from html website.
+9 - Then go into the header.php file and change the UL Tag from the code given by pradip. It is for taking the menu from wordpress.
+10 - But remember the menu_class it should contain the same code of UL Tag.
+11 - change in tag to top-menu and footer-menu. point 10.
+12 - add wp_bootstrap_navwalker.php file in root folder. Get it from internet.
+13 - If you are using post than use that code in template-home.php
+14 - For footer add the code first in functions.php, then copy paste same code for as many widgets you want.Than rename it to footer one, two and so on.
+15 - Than add another code in footer.php "<?php dynamic_sidebar( 'Footer One' ); ?>" to get the footer.
+16 - Post - for post use the code first paste the code in start and at end. than in centre with all main code.
+
+
+Website Mockup - Refer an image and create same website on that:
+Use dreamviewer if you have.
+Create website referring from an website homepage image. Using bootstrap.
+Create a folder with name of website.
+Create index.html with the code inside that folder.
+Download bootstrap.
+Now create folder of css, images and js and copy font folder from bootstrap and paste it in same folder.
+In css folder create style.css and paste css file from bootstrap so there is 2 files of css.
+Fonts folder will remain same of bootstrap just direct copy and paste.
+In js folder, one file would be script.js manually created, copy paste bootstrap js file, and one jquery file download it from internet.
+Now in index.html file link it to other folder and files by adding the code.
+Following will be the code: Change accordingly to your preference.
+
+<link href="css/style.css" type="text/css" rel="stylesheet"  />
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet"  />
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>

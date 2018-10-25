@@ -1,0 +1,21 @@
+Use dreamviewer if you have.
+
+Create website referring from an website homepage image. Using bootstrap.
+Create a folder with name of website.
+Create index.html with the code inside that folder.
+
+Download bootstrap.
+Now create folder of css, images and js and copy font folder from bootstrap and paste it in same folder.
+In css folder create style.css and paste css file from bootstrap so there is 2 files of css.
+Fonts folder will remain same of bootstrap just direct copy and paste.
+In js folder, one file would be script.js manually created, copy paste bootstrap js file, and one jquery file download it from internet.
+Now in index.html file link it to other folder and files by adding the code.
+Following will be the code: Change accordingly to your preference.
+
+<link href="css/style.css" type="text/css" rel="stylesheet"  />
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet"  />
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+
