@@ -1,0 +1,4 @@
+<?php echo home_url(); ?>/wp-content/uploads/path/to
+
+
+Paste this to get the image.

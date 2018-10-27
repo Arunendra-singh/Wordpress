@@ -1,0 +1,78 @@
+/*Pagination*/
+
+.pagination {
+	clear:both;
+	padding:20px 0;
+	position:relative;
+	font-size:11px;
+	line-height:13px;
+}
+
+.pagination span, .pagination a {
+	display:block;
+	float:left;
+	margin: 2px 2px 2px 0;
+	padding:11px 10px 11px 10px;
+	text-decoration:none;
+	width:auto;
+	color:#9d9d9d;
+	background: #fff;
+	border: 1px solid #9d9d9d;
+}
+
+.pagination a:hover{
+	color:#fff;
+	background: #72a115;
+}
+
+.pagination .current{
+	padding:11px 10px 11px 10px;
+	background: #72a115;
+	color:#fff;
+	border: 1px solid #cdcdcd;
+}
+.pagi {
+	text-align: center;
+}
+/*Pagination end*/
+
+
+<!--function--!>
+function pagination($pages = '', $range = 1)
+{  
+     $showitems = ($range * 1)+1;  
+ 
+     global $paged;
+     if(empty($paged)) $paged = 1;
+ 
+     if($pages == '')
+     {
+         global $wp_query;
+         $pages = $wp_query->max_num_pages;
+         if(!$pages)
+         {
+             $pages = 1;
+         }
+     }   
+ 
+     if(1 != $pages)
+     {
+         echo "<div class=\"pagination\"><span class=\"pages-no\">Page ".$paged." of ".$pages."</span>";
+         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."' class=\"first-page\">&laquo; First</a>";
+         if($paged > 1 && $showitems < $pages) echo "<a href='".get_pagenum_link($paged - 1)."'>&lsaquo; Previous</a>";
+ 
+         for ($i=1; $i <= $pages; $i++)
+         {
+             if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+             {
+                 echo ($paged == $i)? "<span class=\"current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"inactive\">".$i."</a>";
+             }
+         }
+ 
+         if ($paged < $pages && $showitems < $pages) echo "<a href=\"".get_pagenum_link($paged + 1)."\">Next &rsaquo;</a>";  
+         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."' class=\"last-page\">Last &raquo;</a>";
+         echo "</div>\n";
+     }
+}
+Call function
+<?php pagination(); ?>
