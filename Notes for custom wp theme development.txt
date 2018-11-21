@@ -1,0 +1,12 @@
+1 - create the db
+1 - Install the theme
+3 - see to revelant design of wordpress related to youe theme
+4 - After the installations go to permalinks and select the post.
+5 - update the plugins if necessary.
+6 - create the child theme.
+7 - copy paste the all html files in the child theme.
+8 - Create style.css and paste the code from https://codex.wordpress.org/Child_Themes
+9 - create functions.php and paste the code
+10 - copy and paste wp_bootstrap_navwalker.php this file in root directory 
+11 - create a home page and set it to reading. 
+12 - Set homepage under name of the template like template-home.php

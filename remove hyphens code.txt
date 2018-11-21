@@ -1,0 +1,12 @@
+.entry-content,
+.entry-summary,
+.page-content,
+.nav-links,
+.comment-content,
+.widget
+ {
+   -webkit-hyphens: none;
+   -moz-hyphens:    none;
+   -ms-hyphens:     none;
+   hyphens:         none;
+}

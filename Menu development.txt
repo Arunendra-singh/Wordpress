@@ -1,0 +1,10 @@
+For creating menu
+Copy and paste the code from header.php file from the parent theme.
+
+In this code menu is called and you need to paste the ul class - 
+
+<?php wp_nav_menu( array('menu' => 'Main', 'container' => '', 'items_wrap' => '<ul class="nav navbar-nav custnav">%3$s</ul>' )); ?>
+
+or
+
+<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav nav-tabs',  ) ); ?>
