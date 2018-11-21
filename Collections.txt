@@ -1,0 +1,3 @@
+Different post on single page and giving them category.
+
+Done on personal impact website. -  refered link was: https://codex.wordpress.org/Function_Reference/get_the_category

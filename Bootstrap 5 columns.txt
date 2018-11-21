@@ -1,0 +1,57 @@
+@media  (min-width: 768px) {
+    div.col-sm-7.five-three {
+    width: 60% !important;
+    }
+
+    div.col-sm-5.five-two {
+    width: 40% !important;
+    }
+}
+
+
+
+<div class="row">
+	<div class="col-sm-7 five-three">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="meetour-content">
+					<img class="img-responsive" src="http://vlasenow.com/dr-william-ting/wp-content/uploads/2017/01/Ingrid-Freeny.jpg" alt="" />
+					<h6>Dr. Ingrid Freeny</h6>
+					<h5>Director</h5>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="meetour-content">
+					<img class="img-responsive" src="http://vlasenow.com/dr-william-ting/wp-content/uploads/2017/01/Annie-Callahan.jpg" alt="" />
+					<h6>Annie Callahan</h6>
+					<h5>Assistant Director</h5>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="meetour-content">
+				<img class="img-responsive" src="http://vlasenow.com/dr-william-ting/wp-content/uploads/2017/01/Carey-Cano.jpg" alt="" />
+				<h6>Carey Cano</h6>
+				<h5>Physician's Assistant</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-5 five-two">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="meetour-content">
+					<img class="img-responsive" src="http://vlasenow.com/dr-william-ting/wp-content/uploads/2017/01/jessica-man.jpg" alt="" />
+					<h6>Jessica Man</h6>
+					<h5>Physician's Assistant</h5>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="meetour-content">
+					<img class="img-responsive" src="http://vlasenow.com/dr-william-ting/wp-content/uploads/2017/01/Willian-Ting.jpg" alt="" />
+					<h6>Dr. Willian Ting</h6>
+					<h5>Medical Director</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
