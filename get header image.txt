@@ -1,4 +1,0 @@
-Refrenced from https://codex.wordpress.org/Custom_Headers
-Note -- Insert this link in your div class of header.php file.
-
-<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
