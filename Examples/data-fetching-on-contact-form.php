@@ -1,6 +1,8 @@
 A example file where we can select multiple different fields option and send data
 
-/* CSS style for form - TOGGLE STYLING */
+/* Test data page styles */
+
+/* TOGGLE STYLING */
 .toggle {
   margin: 2rem 0 0;
   box-sizing: border-box;
@@ -78,76 +80,122 @@ A example file where we can select multiple different fields option and send dat
     align-items: center;
   }
 }
-/* Style ends */
 
-/* Here is Html code for form */
 
-<h2 style="text-align: center; color: #7d3daf;"><strong>Will our invisible aligners work for you? Tell us these 4 things to find out.</strong></h2>
+/* Test data page styles ends */
+
+
+
+/* HTML Code for form */
+
+<h5 style="text-align: center; text-transform: uppercase;">Try to your assignment</h5>
+<h2>&nbsp;</h2>
+
+<h2 style="text-align: center; color: #7d3daf;"><strong>Will our invisible aligners work for you?
+Tell us these 4 things to find out.</strong></h2>
 <div style="text-align: center; padding: 50px 0;">
-	<h4 style="color: #7d3daf;">Choose the option that best describes your biggest concern with your smile:</h4>
-	<div style="padding: 30px 0;">
-		<select id="input_3_1" class="medium gfield_select" tabindex="1" name="input_1" aria-required="true" aria-invalid="false">
-			<option value="Fix a spacing issue">Fix a spacing issue</option>
-			<option value="Fix a crowding issue">Fix a crowding issue</option>
-			<option value="Fix a bite problem (overbite, underbite or crossbite)">Fix a bite problem (overbite, underbite or crossbite)</option>
-			<option value="Generally straighter teeth">Generally straighter teeth</option>
-		</select>
-	</div>
-	
-	<h4 style="color: #7d3daf;">Have you had braces or invisible aligners in the past?</h4>
-	<div class="toggle">
-		<ul class="field_radio" style="list-style: none; width: 100%;">
-			<li style="float:left; text-align: center; margin-top: 2rem; margin-left: 25%; display: inline; margin-right: 2rem;">
-			  <input id="S_weight" checked="checked" name="sizeBy" type="radio"><label for="S_weight">Yes</label>
-			</li>
-			<li style="float:left; text-align: center; margin-top: 2rem;">
-			 <input  id="S_dimensions" name="sizeBy" type="radio"><label for="S_dimensions">No</label>
-			</li>
-		</ul>
-	</div>
+<h4 style="color: #7d3daf;">Choose the option that best describes your biggest concern with your smile:</h4>
+<div style="padding: 30px 0;"><select id="input_3_1" class="medium gfield_select" tabindex="1" name="input_1" aria-required="true" aria-invalid="false">
+<option value="Fix a spacing issue">Fix a spacing issue</option>
+<option value="Fix a crowding issue">Fix a crowding issue</option>
+<option value="Fix a bite problem (overbite, underbite or crossbite)">Fix a bite problem (overbite, underbite or crossbite)</option>
+<option value="Generally straighter teeth">Generally straighter teeth</option>
+</select></div>
+<h4 style="color: #7d3daf;">Have you had braces or invisible aligners in the past?</h4>
+
+
+
+<div class="toggle">
+<ul class="field_radio" style="list-style: none; width: 100%;">
+<li style="float:left; text-align: center; margin-top: 2rem; margin-left: 25%; display: inline; margin-right: 2rem;">
+  <input id="S_weight" checked="checked" name="sizeBy" type="radio"><label for="S_weight">Yes</label>
+</li>
+<li style="float:left; text-align: center; margin-top: 2rem;">
+ <input  id="S_dimensions" name="sizeBy" type="radio"><label for="S_dimensions">No</label></div>
+</li>
+</ul>
 </div>
 
 <div style="text-align: center; padding: 50px 0;">
-	<h4 style="color: #7d3daf;">Teeth Crowding: Can you pick your teeth out of this lineup (or which one looks the closest)?</h4>
-	<div class="toggle2" style="margin-top: 2rem;">
-		<div class="col-md-4">
-		  <input id="S_weight6" name="imgBy" type="radio" checked=""><label for="S_weight6"><img src="http://coderzz.com/shubham/Happy-Teethwp/wp-content/uploads/2019/02/steps_icon1.png" type="image" width="100" alt="selection"></label>
-		  <p style="text-align: center;">mild or no crowding</p>
-		</div>
-	</div>
-	<div class="toggle2" style="margin-top: 2rem;">
-		<div class="col-md-4">
-		   <input id="S_weight1" name="imgBy" type="radio"><label for="S_weight1"><img src="http://coderzz.com/shubham/Happy-Teethwp/wp-content/uploads/2019/02/steps_icon1.png" type="image" width="100" alt="selection1"></label>
-		   <p style="text-align: center;">moderate</p>
-		</div>
-	</div>
-	<div class="toggle2" style="margin-top: 2rem;">
-		<div class="col-md-4">
-		  <input id="S_weight2" name="imgBy" type="radio"><label for="S_weight2"><img src="http://coderzz.com/shubham/Happy-Teethwp/wp-content/uploads/2019/02/steps_icon1.png" type="image" width="100" alt="selection2"></label>
-		  <p style="text-align: center;">severe</p>
-		</div>
-	</div>
+ <h4 style="color: #7d3daf;">Teeth Crowding: Can you pick your teeth out of this lineup (or which one looks the closest)?</h4>
+ <div class="toggle2" style="margin-top: 2rem;">
+ <div class="col-md-4">
+  <input id="S_weight6" name="imgBy" type="radio" checked=""><label for="S_weight6"><img src="http://coderzz.com/shubham/Happy-Teethwp/wp-content/uploads/2019/02/steps_icon1.png" type="image" width="100" alt="selection"></label>
+  <p style="text-align: center;">mild or no crowding</p>
+</div>
+ </div>
+ <div class="toggle2" style="margin-top: 2rem;">
+  <div class="col-md-4">
+   <input id="S_weight1" name="imgBy" type="radio"><label for="S_weight1"><img src="http://coderzz.com/shubham/Happy-Teethwp/wp-content/uploads/2019/02/steps_icon1.png" type="image" width="100" alt="selection1"></label>
+   <p style="text-align: center;">moderate</p>
+</div>
+ </div>
+ <div class="toggle2" style="margin-top: 2rem;">
+ <div class="col-md-4">
+  <input id="S_weight2" name="imgBy" type="radio"><label for="S_weight2"><img src="http://coderzz.com/shubham/Happy-Teethwp/wp-content/uploads/2019/02/steps_icon1.png" type="image" width="100" alt="selection2"></label>
+  <p style="text-align: center;">severe</p>
+</div>
+ </div>
 
-	<div class="toggle2" style="margin-top: 2rem;">
-		<div class="col-md-4">
-		  <input id="S_weight3" name="imgBy" type="radio" checked=""><label for="S_weight3"><img src="http://coderzz.com/shubham/Happy-Teethwp/wp-content/uploads/2019/02/steps_icon1.png" type="image" width="100" alt="selection"></label>
-		  <p style="text-align: center;">mild or no crowding</p>
-		</div>
-	</div>
-	<div class="toggle2" style="margin-top: 2rem;">
-		<div class="col-md-4">
-		   <input id="S_weight4" name="imgBy" type="radio"><label for="S_weight4"><img src="http://coderzz.com/shubham/Happy-Teethwp/wp-content/uploads/2019/02/steps_icon1.png" type="image" width="100" alt="selection1"></label>
-		   <p style="text-align: center;">moderate</p>
-		</div>
-	</div>
-	<div class="toggle2" style="margin-top: 2rem;">
-		<div class="col-md-4">
-		  <input id="S_weight5" name="imgBy" type="radio"><label for="S_weight5"><img src="http://coderzz.com/shubham/Happy-Teethwp/wp-content/uploads/2019/02/steps_icon1.png" type="image" width="100" alt="selection2"></label>
-		  <p style="text-align: center;">severe</p>
-		</div>
-	</div>
+<div class="toggle2" style="margin-top: 2rem;">
+ <div class="col-md-4">
+  <input id="S_weight3" name="imgBy" type="radio" checked=""><label for="S_weight3"><img src="http://coderzz.com/shubham/Happy-Teethwp/wp-content/uploads/2019/02/steps_icon1.png" type="image" width="100" alt="selection"></label>
+  <p style="text-align: center;">mild or no crowding</p>
+</div>
+ </div>
+ <div class="toggle2" style="margin-top: 2rem;">
+  <div class="col-md-4">
+   <input id="S_weight4" name="imgBy" type="radio"><label for="S_weight4"><img src="http://coderzz.com/shubham/Happy-Teethwp/wp-content/uploads/2019/02/steps_icon1.png" type="image" width="100" alt="selection1"></label>
+   <p style="text-align: center;">moderate</p>
+</div>
+ </div>
+ <div class="toggle2" style="margin-top: 2rem;">
+ <div class="col-md-4">
+  <input id="S_weight5" name="imgBy" type="radio"><label for="S_weight5"><img src="http://coderzz.com/shubham/Happy-Teethwp/wp-content/uploads/2019/02/steps_icon1.png" type="image" width="100" alt="selection2"></label>
+  <p style="text-align: center;">severe</p>
+</div>
+ </div>
 </div>
 
 <div class="row" style="text-align: center; margin-top: 18rem; font-size: 24px; font-weight: 600;">
-	<button style="color: #7d3daf;padding: 20px 100px; border-radius: 48px; padding: 10px 20px;" form="nameform" type="submit" value="Submit">GET YOUR RESULT</button>
+
+ <button class="btn btn-lg" data-toggle="modal" data-target="#myModal" style="color:#7d3daf; padding:20px 100px; border-radius:48px; padding:10px 20px;" type="submit" value="Submit"> GET YOUR RESULT </button>
+ <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+   <div class="modal-content">
+    <div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+     </div>
+     <div class="modal-body">
+	Thank You! <br>Just a moment while we assess your answers
+     </div>
+     <div class="modal-footer">
+	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+     </div>
+    </div>
+   </div>
 </div>
+
+/* HTML Code ends */
+
+
+
+// script for footer page..
+	
+	<script>
+		function centerModal() {
+			$(this).css('display', 'block');
+			var $dialog = $(this).find(".modal-dialog");
+			var offset = ($(window).height() - $dialog.height()) / 2;
+			// Center modal vertically in window
+			$dialog.css("margin-top", offset);
+		}
+
+		$('.modal').on('show.bs.modal', centerModal);
+		
+		$(window).on("resize", function () {
+			$('.modal:visible').each(centerModal);
+		});
+	</script>
