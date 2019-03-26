@@ -1,3 +1,6 @@
+// implement on page using sortcode - <?php custom_breadcrumbs(); ?>      //
+
+
 <?php 
 /**
  * Promotional Candy functions and definitions for breadcrumbs
