@@ -1,0 +1,59 @@
+<!-- Slider Section -->
+		<div class="row slider_section">
+
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<!-- Wrapper for slides -->
+				<?php
+					$slides = array(); 
+					$args = array( 'posts_per_page'=>5, 'post_type' => 'sliders', 'order' => 'ASC', 'nopaging'=>true );
+					$slider_query = new WP_Query( $args );
+					if ( $slider_query->have_posts() ) {
+	    				while ( $slider_query->have_posts() ) {
+	        			  $slider_query->the_post();
+	        				if(has_post_thumbnail()){
+				             $temp = array();
+				             $thumb_id = get_post_thumbnail_id();
+				             $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'full', true);
+				             $thumb_url = $thumb_url_array[0];
+				             //$temp['content'] = get_the_content();
+				             $temp['excerpt'] = get_the_excerpt();
+				             $temp['image'] = $thumb_url;
+				             $temp['content1'] = get_field('banner_description');
+				             $temp['content2'] = get_field('banner_button');
+				             $temp['content3'] = get_field('banner_button_link');
+				             $temp['content4'] = get_field('banner_sign_img');
+				             $slides[] = $temp;
+	        				}
+	    				}
+					} 
+					wp_reset_postdata();
+				?>
+
+				<?php if(count($slides) > 0) { ?>
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+					    <div class="carousel-inner" role="listbox">
+					        <?php $i=0; foreach($slides as $slide) { extract($slide); ?>
+					        <div class="item <?php if($i == 0) { ?>active<?php } ?>">
+					            <img src="<?php echo $image ?>" alt="<?php echo esc_attr($title); ?>">
+					            <div class="carousel-caption">
+					            	<div class="banner_content">
+										<?php echo $content1; ?><br/>
+										<a href="<?php echo $content3; ?>" class="btn-shadow"><?php echo $content2; ?></a>
+									</div>
+					            </div>
+					        </div>
+					        <?php $i++; } ?>
+					    </div>
+
+	    				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+	    				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+					</div>
+					<div class="slide quality_section">
+						<img src="<?php echo $content4; ?>" class="img-responsive center-block">
+					</div>
+
+				<?php } ?>
+			</div>
+			
+		</div>
