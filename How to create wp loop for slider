@@ -1,0 +1,49 @@
+<!-- Slider Section -->
+    <div id="carouselExampleControls" class="cus_style carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <?php
+                $loop = new WP_Query( array( 'post_type' => 'sliders', 'posts_per_page' => '-1' ) );
+                if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); 
+            ?>
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="<?php if ( $loop->current_post == 0 ) : ?>active<?php endif; ?>"></li>
+
+            <?php endwhile; endif; wp_reset_postdata(); ?>
+            <?php wp_reset_query(); ?>
+        </ol> 
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <?php
+                $loop = new WP_Query( array( 'post_type' => 'sliders', 'posts_per_page' => '-1' ) );
+                if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); 
+            ?>
+            <div class="carousel-item <?php if ( $loop->current_post == 0 ) : ?>active<?php endif; ?>">
+
+                <?php echo the_post_thumbnail('full', array('class' => 'post_img d-block w-100')); ?>
+
+                <div class="container welcome" style="background-color: #33333315">
+                    <p class="text-center text-white oswald" style="font-size: 40px;">Get best and delicious food recipes here !</p> 
+                    <button id="myBtn" class="button-online-order d-block mx-auto oswald" onclick="div_show()" style="margin-bottom: 15px;">GET STARTED</button> -->
+
+
+                <!-- <button class="button-online-order d-block mx-auto"><span><i class="fa fa-cart-plus pr-2" aria-hidden="true"></i></span>BUY</button> -->
+                </div>
+            </div>
+
+            <?php endwhile; endif; wp_reset_postdata(); ?>
+            <?php wp_reset_query(); ?>
+
+            
+            <?php echo do_shortcode("[contact-form-7 id='122' title='Contact form']") ?>
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div> 
+    <!-- Slider Section Ends-->
