@@ -1,0 +1,14 @@
+This file data is let us know : How to create double header on wordpress website and call on specific/respective page.
+
+Tips : 	1 Create two header file so first header.php
+		2 and second with specific name like header-home.php
+		3 On which page you have need specific header file just put as 
+
+<?php if ( is_page() ) :  get_header( 'home' );           // or we can use is_front_page()
+	else:
+	get_header();
+	endif; 
+?>
+
+		4 Spouse we have multiple header file and we need to use one custom header in some common pages so 
+		have to call like this :  get_header( 'home' );
