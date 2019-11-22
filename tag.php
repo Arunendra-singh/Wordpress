@@ -1,3 +1,6 @@
+Tag.php file use for display tag on your page
+
+
 <?php
 /**
  * The template for displaying Tag pages
