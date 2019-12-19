@@ -1,0 +1,19 @@
+<?php echo get_post_meta($post->ID, 'preston_city_boom', true); ?> 
+
+
+<?php
+  $loop = new WP_Query( array( 'post_type' => 'bidhelping','posts_per_page' => '-1') );
+  if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); 
+?>
+	<div class="col-md-3 col-sm-6 col-xs-12">
+		<div class="ecity_content">
+			<?php echo the_post_thumbnail('full', array('class' => 'img-responsive center-block')); ?>
+			
+			<h4><?php the_title();?></h4>
+			
+		</div>
+	</div>
+
+<?php endwhile; endif; wp_reset_postdata(); ?>
+
+<?php wp_reset_query(); ?>
