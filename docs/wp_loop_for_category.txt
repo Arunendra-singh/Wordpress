@@ -1,0 +1,74 @@
+Wp Loops for category title display on page using custom template : 
+
+=> First one is calling for woocommerce product category.
+
+	<?php 
+		$args = array(
+		'number' => $number,
+		'orderby' => 'title',
+		'order' => 'DES'
+		);
+
+		$product_categories = get_terms( 'product_cat', $args );
+
+		$count = count($product_categories);
+		if ( $count > 0 ){ ?>
+
+		<div class="abc"> 
+			All Products
+			<?php
+
+				foreach ( $product_categories as $product_category ) {
+					echo '<div class="your-block-class-name">' . $product_category->name . '</div>';
+					$args = array(
+					'posts_per_page' => -1,
+					'tax_query' => array(
+					  'relation' => 'AND',
+					  array(
+						'taxonomy' => 'product_cat',
+						'field' => 'slug',
+						'terms' => $product_category->slug
+					  )
+					),
+					'post_type' => 'product',
+					'orderby' => 'title,'
+					);
+				} 
+			?>
+		</div>
+
+		<?php 
+			}
+		?>
+
+=> Second one is for normal custom post category 
+
+	<div class="col">
+        <h3> All Categories </h3>
+        
+        <?php 
+            $categories = get_categories();
+            
+            foreach ( $categories as $category ) :
+                echo '<p>' . $category->name . '</p>';
+            endforeach;
+        ?>
+	</div>
+
+=> Third one is for drop down - when we want to call product or custom post category name/title in dropdown than we have to follow this : 
+
+	<?php 
+		echo '<select name="categories" onchange="location.href = this.value">';
+
+	  	// Get categories as array
+	  	$categories = get_categories(); 
+	  
+	  	foreach ( $categories as $category ) :
+
+	    echo '<option value="' .get_option('home').'/category/'.$category->slug. '">' . $category->name . '</option>';
+	    // above line code is importent for find category link
+
+	  	endforeach;
+
+		echo '</select>'; 
+	?>
